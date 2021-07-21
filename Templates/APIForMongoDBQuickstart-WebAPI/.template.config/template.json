@@ -1,0 +1,14 @@
+{
+    "$schema": "http://json.schemastore.org/template",
+    "author": "Cosmos DB",
+    "classifications": [ "Cosmos DB", "WebAPI", "API for MongoDB" ],
+    "identity": "Microsoft.Azure.Cosmos.Templates",
+    "name": "API For MongoDB Quickstart - Web API",
+    "shortName": "cosmosmongo-webapi",
+    "sourceName": "APIForMongoDBQuickstart_WebAPI",
+    "preferNameDirectory": false,
+    "tags": {
+        "language": "C#",
+        "type": "project"
+    }
+}

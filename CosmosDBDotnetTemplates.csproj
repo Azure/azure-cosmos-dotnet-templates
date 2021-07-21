@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <PackageType>Template</PackageType>
+    <PackageVersion>1.0.0</PackageVersion>
+    <PackageId>Microsoft.Azure.Cosmos.Templates</PackageId>
+    <Title>Cosmos DB Dotnet Templates</Title>
+    <Authors>Cosmos DB</Authors>
+    <Description>Dotnet templates for Cosmos DB.</Description>
+    <PackageTags>Cosmos-DB;WebAPI,API-for-MongoDB</PackageTags>
+
+    <TargetFramework>net5.0</TargetFramework>
+
+    <IncludeContentInPack>true</IncludeContentInPack>
+    <IncludeBuildOutput>false</IncludeBuildOutput>
+    <ContentTargetFolders>content</ContentTargetFolders>
+    <NoWarn>$(NoWarn);NU5128</NoWarn>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="Templates\**\*" Exclude="Templates\**\bin\**;Templates\**\obj\**" />
+    <Compile Remove="**\*" />
+  </ItemGroup>
+
+</Project>

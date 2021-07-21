@@ -1,14 +1,27 @@
-# Project
+# Azure Cosmos DB .NET Templates
 
-> This repo has been populated by an initial template to help get you started. Please
-> make sure to update the content to build a great experience for community-building.
+This project contains .NET templates and samples for Cosmos DB. The table below contains the current list of templates.
 
-As the maintainer of this project, please make a few updates:
+|API |Template Type|Installation Short Name|Instructions|
+|----|-------------|-----------------------|------------|
+|API for MongoDB|Web API quickstart|cosmosmongo-webapi|[README.md](./Templates/APIForMongoDBQuickstart-WebAPI/README.md)|
 
-- Improving this README.MD file to provide a great experience
-- Updating SUPPORT.MD with content about this project's support experience
-- Understanding the security reporting process in SECURITY.MD
-- Remove this section from the README
+## Install the Templates
+
+These templates can be installed using the dotnet CLI. You can install the templates locally after cloning this repository using the following commands. They will also be pushed to NuGet in the near future.
+
+Install the templates from the root folder of this project.
+
+```cmd
+dotnet new -i .\
+```
+
+Once they are installed, create a new project. For example, the following commands will create the API for MongoDB Web API quickstart.
+
+```cmd
+cd preferred\location\of\project
+dotnet new cosmosmongo-webapi
+```
 
 ## Contributing
 
