@@ -23,12 +23,6 @@ dotnet new cosmosmongo-webapi
 
 Follow [these instructions](https://docs.microsoft.com/en-us/azure/cosmos-db/create-mongodb-dotnet#create-a-database-account) to create a database account.
 
-Once you have created an account create a collection with the following configuration.
-
-![create collection](../../Images/create-collection.png)
-
-> Note: ensure Sku is capitalized when entering your shard key.
-
 ### Update secrets
 
 Modify the `appsettings.json` file to match your configuration. Enter your connection string and modify the database and collection names if you created them with different names.
@@ -45,7 +39,7 @@ Find your connection string by selecting your Cosmos DB account in the Azure por
 
 ### Load sample data
 
-Use [mongoimport](https://docs.mongodb.com/database-tools/mongoimport/#mongodb-binary-bin.mongoimport) to load the sample products provided in the `Data` folder of this repository. Mongoimport is a command line tool that allows you to easily import small amounts of JSON, CSV or TSV data. [Download](https://www.mongodb.com/try/download/database-tools) the tool and run the following from the root of this repository to load the sample data. Update the host, port, username, and password with values from the Connection String left navigation blade in the Azure portal. Be sure to also update the database and collection names if you named yours differently.
+Use [mongoimport](https://docs.mongodb.com/database-tools/mongoimport/#mongodb-binary-bin.mongoimport) to load the sample products provided in the `Data` folder of this project. Mongoimport is a command line tool that allows you to easily import small amounts of JSON, CSV or TSV data. [Download](https://www.mongodb.com/try/download/database-tools) the tool and run the following from the root folder to load the sample data. Update the host, port, username, and password with values from the Connection String left navigation blade in the Azure portal. Be sure to also update the database and collection names if you named yours differently.
 
 ```cmd
 mongoimport --host <HOST>:<PORT> -u <USERNAME> -p <PASSWORD> --db cosmicworks --collection products --ssl --jsonArray --writeConcern="{w:0}" --file Data/products.json
@@ -65,8 +59,4 @@ After the application is running, navigate to [https://localhost:5001/swagger/in
 
 Click on the API you would like to test and select "Try it out".
 
-![try-swagger](../../Images/swagger-1.png)
-
-Enter any necessary parameters and select "Execute."
-
-![execute-swagger](../../Images/swagger-2.png)
+![try-swagger](../../Images/try-swagger.png)
