@@ -1,8 +1,6 @@
-﻿using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using System.Collections.Generic;
-using APIForMongoDBQuickstart_WebAPI.Models;
+﻿using APIForMongoDBQuickstart_WebAPI.Models;
 using APIForMongoDBQuickstart_WebAPI.Services;
+using Microsoft.AspNetCore.Mvc;
 
 namespace APIForMongoDBQuickstart_WebAPI.Controllers
 {

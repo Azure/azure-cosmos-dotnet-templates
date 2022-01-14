@@ -1,7 +1,5 @@
-using MongoDB.Driver;
-using System.Threading.Tasks;
-using System.Collections.Generic;
 using APIForMongoDBQuickstart_WebAPI.Models;
+using MongoDB.Driver;
 
 namespace APIForMongoDBQuickstart_WebAPI.Services
 {
@@ -9,10 +7,9 @@ namespace APIForMongoDBQuickstart_WebAPI.Services
     {
         private readonly IMongoCollection<Product> _products;        
 
-        public ProductService(MongoService mongo, IDatabaseSettings settings)
+        public ProductService(IMongoDatabase db)
         {
-            var db = mongo.GetClient().GetDatabase(settings.DatabaseName);
-            _products = db.GetCollection<Product>(settings.ProductCollectionName);
+            _products = db.GetCollection<Product>(typeof(Product).Name);
         }
 
         public Task<List<Product>> GetNAsync(int n)
