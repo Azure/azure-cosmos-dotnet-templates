@@ -1,6 +1,4 @@
-﻿using System.Threading.Tasks;
-using System.Collections.Generic;
-using APIForMongoDBQuickstart_WebAPI.Models;
+﻿using APIForMongoDBQuickstart_WebAPI.Models;
 
 namespace APIForMongoDBQuickstart_WebAPI.Services
 {
